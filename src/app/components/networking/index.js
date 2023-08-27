@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 
 const Networking = () => {
@@ -52,7 +53,7 @@ const Networking = () => {
                         <div>
                             <div className="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
                                 <h3>Fitment of <em>RDP Networking Connectivity</em> for your business</h3>
-                                <img src="/heading-line-dec.png" alt="" />
+                                <img src="/heading-line-dec.png" alt="Copico systems" />
                                 <p>Imagine a world where geographic barriers are mere illusions. Our RDP networking connectivity service empowers you to establish seamless connections between your server and countless clients, enabling efficient communication and collaboration regardless of distance.</p>
                             </div>
                         </div>

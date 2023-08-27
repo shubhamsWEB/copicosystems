@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import Brands from '../brands';
 const Footer = () => {
@@ -42,7 +43,7 @@ const Footer = () => {
           <div className="footer-widget">
             <h4>About Our Company</h4>
             <div className="logo">
-              <img src="/logo.png" alt="copico systems logo" />
+              <img src="/logo.png" alt="Computer Networking" />
             </div>
             <p>Discover the perfect synergy of technology and service at Copicosystems. Explore our website to learn more about our offerings and connect with us today.</p>
           </div>

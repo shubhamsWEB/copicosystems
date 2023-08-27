@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 
 const About = () => {
@@ -41,7 +43,7 @@ const About = () => {
           </div>
         </div>
           <div className="right-image md:block hidden">
-            <img src="/about-us.png" alt="" />
+            <img src="/about-us.png" alt="RDP Connection" />
           </div>
       </div>
     </div>

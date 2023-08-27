@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 
 const Services = () => {
@@ -9,7 +11,7 @@ const Services = () => {
         <div className='md:px-2 px-4'>
           <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
             <h4>Other Amazing <em>Services &amp; Features</em> for you</h4>
-            <img src="/heading-line-dec.png" alt="" />
+            <img src="/heading-line-dec.png" alt="Computer Networking" />
             <p>Our diverse service offerings extend to troubleshooting, software installation, system optimization, and beyond.</p>
           </div>
         </div>
