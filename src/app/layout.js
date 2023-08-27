@@ -36,22 +36,24 @@ const orgSchema = {
 };
 
 export default function RootLayout({ children }) {
+  const description = `At Copicosystems, we're more than just a computer and peripherals shop – we're your dedicated partner in all things tech-related. With a passion for innovation and a commitment to excellence, we offer a comprehensive range of products and services to cater to your computer needs.`
+  const title = 'Welcome to Copicosystems - Your Ultimate Destination for Computer Solutions and Services';
   return (
     <html lang="en">
-      <title data-react-helmet="true">Welcome to Copicosystems - Your Ultimate Destination for Computer Solutions and Services</title>
-      <meta data-react-helmet="true" name="description" content={`At Copicosystems, we're more than just a computer and peripherals shop – we're your dedicated partner in all things tech-related. With a passion for innovation and a commitment to excellence, we offer a comprehensive range of products and services to cater to your computer needs.`} />
+      <title data-react-helmet="true">{title}</title>
+      <meta data-react-helmet="true" name="description" content={description} />
       <meta data-react-helmet="true" name="robots" content="index, follow" />
       <link rel="icon" type="image/png" href="/logo.png"></link>
-      <meta data-react-helmet="true" property="og:url" content={`https://copicosystems.com`} />
-      <meta data-react-helmet="true" property="og:title" content={`Welcome to Copicosystems - Your Ultimate Destination for Computer Solutions and Services`} />
+      <meta data-react-helmet="true" property="og:url" content={`https://www.copicosystems.com`} />
+      <meta data-react-helmet="true" property="og:title" content={title} />
       <meta data-react-helmet="true" property="og:description" content={`At Copicosystems, we're more than just a computer and peripherals shop – we're your dedicated partner in all things tech-related. With a passion for innovation and a commitment to excellence, we offer a comprehensive range of products and services to cater to your computer needs.`} />
       <meta data-react-helmet="true" property="og:image" content={`https://img1.wsimg.com/isteam/ip/b6642cd2-9072-42e8-b193-ccbebae4292e/blob.png`} />
-      <meta data-react-helmet="true" property="twitter:url" content={`https://copicosystems.com`} />
-      <meta data-react-helmet="true" property="twitter:title" content={`Welcome to Copicosystems - Your Ultimate Destination for Computer Solutions and Services`} />
-      <meta data-react-helmet="true" property="twitter:description" content={`At Copicosystems, we're more than just a computer and peripherals shop – we're your dedicated partner in all things tech-related. With a passion for innovation and a commitment to excellence, we offer a comprehensive range of products and services to cater to your computer needs.`} />
+      <meta data-react-helmet="true" property="twitter:url" content={`https://www.copicosystems.com`} />
+      <meta data-react-helmet="true" property="twitter:title" content={title} />
+      <meta data-react-helmet="true" property="twitter:description" content={description} />
       <meta data-react-helmet="true" property="twitter:image" content={`https://img1.wsimg.com/isteam/ip/b6642cd2-9072-42e8-b193-ccbebae4292e/blob.png`} />
       <link rel="shortcut icon" type="image/png" href="/logo.png" />
-      <link rel="canonical" href='https://copicosystems.com' />
+      <link rel="canonical" href='https://www.copicosystems.com' />
       {/* <link rel="preconnect" href="http://cdn.mouseflow.com" as="script" crossOrigin="true" />
       <link rel="preconnect" href="https://bat.bing.com" as="script" crossOrigin="true" />
       <link rel="preconnect" href="https://www.google.com" />
