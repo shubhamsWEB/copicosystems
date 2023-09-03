@@ -6,7 +6,7 @@ const NavBar = () => {
   const [backgroundTransparacy, setBackgroundTransparacy] = useState(0);
   const [padding, setPadding] = useState(30);
   const [boxShadow, setBoxShadow] = useState(0);
-
+  const [mNavOpen, setMNav] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -34,28 +34,42 @@ const NavBar = () => {
         background: `rgba(255, 255, 255, ${backgroundTransparacy})`,
         boxShadow: `rgb(0 0 0 / ${boxShadow}) 0px 0px 20px 6px`,
       }}>
-        <div className='md:px-36 sm:px-2'>
-          <div className="grid grid-cols-1">
-            <div>
-              <nav className="main-nav">
-                <a href="index.html" className="logo md:text-2xl sm:text-sm font-bold border-4">
-                  <h1 style={{ color: '#3AB9F6' }}>COPICO SYSTEMS</h1>
-                </a>
-                <ul className="nav">
-                  <li className="scroll-to-section"><a href="#top" className="active">Home</a></li>
-                  <li className="scroll-to-section"><a href="#networking">Networking</a></li>
-                  <li className="scroll-to-section"><a href="#services">Services</a></li>
-                  <li className="scroll-to-section"><a href="#about">About</a></li>
-                  <li className="scroll-to-section"><a href="#brands">Brands</a></li>
-                  <li><div className="gradient-button"><a id="modal_trigger" href="#modal"><i className="fa fa-sign-in-alt"></i>Contact: +919617874449</a></div></li>
-                </ul>
-                <a className='menu-trigger'>
-                  <span>Menu</span>
-                </a>
-              </nav>
+
+        <nav className="main-nav">
+          <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="https://flowbite.com/" className="flex items-center">
+              {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="Flowbite Logo" /> */}
+              <span className="self-center text-2xl font-semibold whitespace-nowrap" style={{ color: '#3AB9F6' }}>Copico Systems</span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none" aria-controls="navbar-default" aria-expanded="false" onClick={() => setMNav(!mNavOpen)}>
+              <span className="sr-only">Open main menu</span>
+              <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15" />
+              </svg>
+            </button>
+            <div className={`${mNavOpen ? '' : 'hidden' } w-full md:block md:w-auto`} id="navbar-default">
+              <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white items-center">
+                <li>
+                  <a onClick={() => setMNav(!mNavOpen)} href="#top" className="block py-2 pl-3 pr-4 text-gray-900 rounded md:bg-transparent md:p-0">Home</a>
+                </li>
+                <li>
+                  <a onClick={() => setMNav(!mNavOpen)} href="#networking" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Networking</a>
+                </li>
+                <li>
+                  <a onClick={() => setMNav(!mNavOpen)} href="#services" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+                </li>
+                <li>
+                  <a onClick={() => setMNav(!mNavOpen)} href="#about" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+                </li>
+                <li>
+                  <a onClick={() => setMNav(!mNavOpen)} href="#brands" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Brands</a>
+                </li>
+                <li><div className="gradient-button"><a id="modal_trigger" href="#modal"><i className="fa fa-sign-in-alt"></i>Contact: +919617874449</a></div></li>
+
+              </ul>
             </div>
           </div>
-        </div>
+        </nav>
       </header>
     </>
   )
