@@ -1,11 +1,10 @@
+/* eslint-disable react/no-unescaped-entities */
 import './globals.css'
-// import { Inter } from 'next/font/google'
-
-// const inter = Inter({ subsets: ['latin'] })
-
+import Head from 'next/head';
+import Script from 'next/script';
 export const metadata = {
-  title: 'Welcome to Copicosystems - Your Ultimate Destination for Computer Solutions and Services',
-  description:  `At Copicosystems, we're more than just a computer and peripherals shop – we're your dedicated partner in all things tech-related. With a passion for innovation and a commitment to excellence, we offer a comprehensive range of products and services to cater to your computer needs.`,
+  title: 'Welcome to Copico systems - Your Ultimate Destination for Computer Solutions and Services',
+  description:  `At Copico systems, we're more than just a computer and peripherals shop – we're your dedicated partner in all things tech-related. With a passion for innovation and a commitment to excellence, we offer a comprehensive range of products and services to cater to your computer needs.`,
 }
 const baseSchema = {
   '@context': 'http://schema.org',
@@ -36,8 +35,8 @@ const orgSchema = {
 };
 
 export default function RootLayout({ children }) {
-  const description = `At Copicosystems, we're more than just a computer and peripherals shop – we're your dedicated partner in all things tech-related. With a passion for innovation and a commitment to excellence, we offer a comprehensive range of products and services to cater to your computer needs.`
-  const title = 'Welcome to Copicosystems - Your Ultimate Destination for Computer Solutions and Services';
+  const description = `At Copico systems, we're more than just a computer and peripherals shop – we're your dedicated partner in all things tech-related. With a passion for innovation and a commitment to excellence, we offer a comprehensive range of products and services to cater to your computer needs.`
+  const title = 'Welcome to Copico systems - Your Ultimate Destination for Computer Solutions and Services';
   return (
     <html lang="en">
       <title data-react-helmet="true">{title}</title>
@@ -54,15 +53,20 @@ export default function RootLayout({ children }) {
       <meta data-react-helmet="true" property="twitter:image" content={`https://img1.wsimg.com/isteam/ip/b6642cd2-9072-42e8-b193-ccbebae4292e/blob.png`} />
       <link rel="shortcut icon" type="image/png" href="/logo.png" />
       <link rel="canonical" href='https://www.copicosystems.com' />
-      {/* <link rel="preconnect" href="http://cdn.mouseflow.com" as="script" crossOrigin="true" />
-      <link rel="preconnect" href="https://bat.bing.com" as="script" crossOrigin="true" />
-      <link rel="preconnect" href="https://www.google.com" />
-      <link rel="preconnect" href="https://www.gstatic.com" crossOrigin="true" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" /> */}
       <script type="application/ld+json">{JSON.stringify(webSchema)}</script>
       <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
+      <Script src="https://www.googletagmanager.com/gtag/js?id=AW-11322209896" />
+<Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'AW-11322209896');
+        `}
+      </Script>
+
       <body>{children}</body>
-      {/* <body className={inter.className}>{children}</body> */}
     </html>
   )
 }
