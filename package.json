@@ -12,6 +12,7 @@
     "build-static-repair-index": "replace-in-files --string \"/_next/static\" --replacement \"./_next/static\" out/index.html"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.0.2",
     "autoprefixer": "10.4.15",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",

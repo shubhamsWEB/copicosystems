@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import './globals.css'
-import Head from 'next/head';
 import Script from 'next/script';
+import { Analytics } from '@vercel/analytics/react';
 export const metadata = {
   title: 'Welcome to Copico systems - Your Ultimate Destination for Computer Solutions and Services',
   description:  `At Copico systems, we're more than just a computer and peripherals shop – we're your dedicated partner in all things tech-related. With a passion for innovation and a commitment to excellence, we offer a comprehensive range of products and services to cater to your computer needs.`,
@@ -66,7 +66,7 @@ export default function RootLayout({ children }) {
         `}
       </Script>
 
-      <body>{children}</body>
+      <body>{children}<Analytics/></body>
     </html>
   )
 }
