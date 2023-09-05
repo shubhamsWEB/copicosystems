@@ -64,6 +64,8 @@ export default function RootLayout({ children }) {
           gtag('config', 'AW-11322209896');
           `}
         </Script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6021591618681649"
+     crossorigin="anonymous"></script>
           <script type="application/ld+json">{JSON.stringify(webSchema)}</script>
           <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
       </head>
