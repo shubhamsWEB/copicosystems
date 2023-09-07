@@ -6,33 +6,6 @@ export const metadata = {
   title: 'Welcome to Copico systems - Your Ultimate Destination for Computer Solutions and Services',
   description: `At Copico systems, we're more than just a computer and peripherals shop – we're your dedicated partner in all things tech-related. With a passion for innovation and a commitment to excellence, we offer a comprehensive range of products and services to cater to your computer needs.`,
 }
-const baseSchema = {
-  '@context': 'http://schema.org',
-  name: 'Copico systems',
-  url: 'https://www.copicosystems.com',
-};
-const webSchema = {
-  ...baseSchema,
-  '@type': 'WebSite',
-};
-
-const orgSchema = {
-  ...baseSchema,
-  '@type': 'Company',
-  contactPoint: [
-    {
-      '@type': 'ContactPoint',
-      telephone: '+91-9617874449',
-      contactType: 'Customer Service',
-    },
-  ],
-  logo: 'https://img1.wsimg.com/isteam/ip/b6642cd2-9072-42e8-b193-ccbebae4292e/blob.png',
-  sameAs: [
-    'https://www.facebook.com/copicosystems',
-    'https://twitter.com/copicosystems',
-    'https://www.linkedin.com/company/copicosystems',
-  ],
-};
 
 export default function RootLayout({ children }) {
   const description = `At Copico systems, we're more than just a computer and peripherals shop – we're your dedicated partner in all things tech-related. With a passion for innovation and a commitment to excellence, we offer a comprehensive range of products and services to cater to your computer needs.`
@@ -65,11 +38,18 @@ export default function RootLayout({ children }) {
           `}
         </Script>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6021591618681649"
-     crossorigin="anonymous"></script>
-          <script type="application/ld+json">{JSON.stringify(webSchema)}</script>
-          <script type="application/ld+json">{JSON.stringify(orgSchema)}</script>
+          crossorigin="anonymous"></script>
+        <Script type="text/javascript" id="google-translate">
+          {`function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element')
+}`}
+        </Script>
+        <Script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></Script>
       </head>
-      <body>{children}<Analytics /></body>
+      <body>
+
+        {children}<Analytics />
+</body>
     </html>
   )
 }

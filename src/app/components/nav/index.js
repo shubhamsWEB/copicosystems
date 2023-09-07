@@ -33,13 +33,12 @@ const NavBar = () => {
       <header className="header-area header-sticky wow slideInDown sticky top-0 z-50" data-wow-duration="0.75s" data-wow-delay="0s" style={{
         background: `rgba(255, 255, 255, ${backgroundTransparacy})`,
         boxShadow: `rgb(0 0 0 / ${boxShadow}) 0px 0px 20px 6px`,
+        zIndex:999999999
       }}>
-
         <nav className="main-nav">
           <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="https://flowbite.com/" className="flex items-center">
-              {/* <img src="https://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="Flowbite Logo" /> */}
-              <span className="self-center text-2xl font-semibold whitespace-nowrap" style={{ color: '#3AB9F6' }}>Copico Systems</span>
+            <a href="#" className="flex items-center">
+              <span className="self-center text-2xl font-semibold whitespace-nowrap" style={{ color: '#3AB9F6',fontWeight:'bolder' }}>Copico Systems</span>
             </a>
             <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none" aria-controls="navbar-default" aria-expanded="false" onClick={() => setMNav(!mNavOpen)}>
               <span className="sr-only">Open main menu</span>
@@ -65,6 +64,7 @@ const NavBar = () => {
                   <a onClick={() => setMNav(!mNavOpen)} href="#brands" className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Brands</a>
                 </li>
                 <li><div className="gradient-button"><a id="modal_trigger" href="#modal"><i className="fa fa-sign-in-alt"></i>Contact: +919617874449</a></div></li>
+                <li><div id="google_translate_element" className='google-translate'></div></li>
 
               </ul>
             </div>
