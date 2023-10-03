@@ -24,6 +24,7 @@ export default function RootLayout({ children }) {
         <meta data-react-helmet="true" property="twitter:url" content={`https://www.copicosystems.com`} />
         <meta data-react-helmet="true" property="twitter:title" content={title} />
         <meta data-react-helmet="true" property="twitter:description" content={description} />
+        <meta name="google-site-verification" content="aOgm4CwOOSshb2wQpWhXVQpSSWT0uKfv86YL2QLUXCQ" />
         <meta data-react-helmet="true" property="twitter:image" content={`https://img1.wsimg.com/isteam/ip/b6642cd2-9072-42e8-b193-ccbebae4292e/blob.png`} />
         <link rel="shortcut icon" type="image/png" href="/logo.png" />
         <link rel="canonical" href='https://www.copicosystems.com' />
